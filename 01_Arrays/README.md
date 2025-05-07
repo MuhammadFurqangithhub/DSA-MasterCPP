@@ -1,6 +1,6 @@
 # 📁 01_Arrays - Mastering Arrays in C++
 
-This folder contains optimized and tricky C++ programs focused on **array manipulation**, **pointer usage**, and **interview-level logic**. Each program is designed to strengthen your understanding of arrays in C++, with clean and efficient solutions.
+This folder contains 15 optimized and tricky C++ programs focused on **array manipulation**, **pointer usage**, and **interview-level logic**. Each program is clean, readable, and written with performance and clarity in mind.
 
 ---
 
@@ -8,72 +8,121 @@ This folder contains optimized and tricky C++ programs focused on **array manipu
 
 ### ✅ `01_reverse_array.cpp`
 Reverses an array in-place using the **two-pointer** technique.  
-💡 *One of the most common interview problems to test your grip on basic array operations.*
+💡 *Tests your grip on basic array operations and in-place manipulation.*
 
 ---
 
 ### ✅ `02_move_zeroes.cpp`
 Moves all zeroes to the end of the array **without changing the relative order** of non-zero elements.  
-✨ *Implemented using two raw pointers — avoids indexing completely, ideal for understanding low-level manipulation.*
+✨ *Implemented using two raw pointers — ideal for learning low-level pointer logic.*
 
 ---
 
 ### ✅ `03_second_largest.cpp`
-Finds the **second largest element** in an array without using `INT_MIN`.  
-🔢 *Carefully handles edge cases where elements may be negative or duplicates.*
+Finds the second largest element in the array using a **single traversal**.  
+🚀 *No sorting or extra space used.*
 
 ---
 
-### ✅ `04_remove_duplicates.cpp`
-Removes duplicates from a **sorted array** in-place and returns the new length.  
-🚫 *Efficient in-place approach using pointer comparisons.*
+### ✅ `04_remove_duplicates_sorted.cpp`
+Removes duplicates from a sorted array **in-place**, returns the new length.  
+🧹 *Two-pointer approach simulates `std::unique` behavior.*
 
 ---
 
-### ✅ `05_left_rotate_d.cpp`
-Rotates an array to the **left by D positions** using reversal algorithm.  
-🔁 *Optimal in-place solution with O(n) time and O(1) space.*
+### ✅ `05_left_rotate_d_positions.cpp`
+Left rotates an array by D positions using the **reversal algorithm**.  
+🔁 *Efficient, in-place, and O(n) time complexity.*
 
 ---
 
-### ✅ `06_sort_012.cpp` – *Dutch National Flag Algorithm*
-Sorts an array containing only 0s, 1s, and 2s in a **single pass** using three pointers.  
-🎨 *The Dutch National Flag algorithm divides the array into 3 sections:*
+### ✅ `06_sort_0s_1s_2s.cpp`  
+Implements the **Dutch National Flag Algorithm** to sort 0s, 1s, and 2s in a single traversal.  
+🎨 *Dijkstra’s three-way partitioning approach for linear sorting.*
 
-- `low` → all 0s  
-- `mid` → all 1s  
-- `high` → all 2s  
-
-➡️ Elements are swapped in place to maintain these zones in a single traversal.  
-🧠 **Time Complexity:** O(n) | **Space:** O(1)
+🔍 **About the Dutch National Flag Algorithm:**  
+It partitions the array into three sections: `<pivot`, `=pivot`, and `>pivot`. Ideal for problems like sorting colors or partitioning elements efficiently.
 
 ---
 
-### ✅ `07_kadane_max_subarray.cpp` – *Kadane’s Algorithm*
-Finds the **maximum subarray sum** efficiently, even when negatives are involved.  
-📈 *Instead of checking all subarrays (which takes O(n²)), it maintains a running sum and resets when it goes negative.*
+### ✅ `07_kadane_max_subarray.cpp`
+Finds the maximum subarray sum using **Kadane's Algorithm**.  
+📈 *A dynamic programming approach with linear time.*
 
-- Let `maxSum = currentSum = arr[0]`  
-- For every element:  
-  - `currentSum = max(arr[i], currentSum + arr[i])`  
-  - `maxSum = max(maxSum, currentSum)`
-
-✨ Simple, fast, and widely used in coding interviews.  
-🧠 **Time Complexity:** O(n) | **Space:** O(1)
-
----
-## 🚀 Upcoming Programs (Planned)
-
-- 🔄 Check if array is sorted and rotated
-- 🔀 Merge two sorted arrays in-place
-- 🔍 Array intersection and union
-- 🎯 Subarray with given sum
-- 🗳️ Majority element using Boyer-Moore
-- 📆 Longest consecutive subsequence
-- ➕ Rearranging positive and negative numbers
-- 🧠 Leaders in an array
+🧠 **Kadane’s Algorithm Explained:**  
+At each index, decide whether to include the current element in the previous subarray or start a new one. Track the maximum encountered so far.
 
 ---
 
-> ✨ Stay tuned for more optimized and advanced array-based problems with clear logic and pointer implementations!
+### ✅ `08_check_sorted_rotated.cpp`
+Checks if the given array is **sorted and rotated**.  
+🔄 *Counts the number of sorted violations — only one is allowed for valid rotation.*
+
+---
+
+### ✅ `09_merge_sorted_arrays.cpp`
+Merges two sorted arrays **in-place** without using extra space.  
+⚔️ *Uses the Gap method (Shell Sort concept) to reduce comparisons.*
+
+---
+
+### ✅ `10_intersection_union.cpp`
+Finds **intersection and union** of two arrays using hashing.  
+📊 *Demonstrates use of `unordered_set` for O(n) average complexity.*
+
+---
+
+### ✅ `11_subarray_given_sum.cpp`
+Finds a **continuous subarray** that adds up to a given sum (for positive integers).  
+🎯 *Sliding window approach, O(n) time.*
+
+---
+
+### ✅ `12_majority_element.cpp`
+Finds the **majority element** using Boyer-Moore Voting Algorithm.  
+🗳️ *O(n) time and O(1) space — optimal and elegant solution.*
+
+---
+
+### ✅ `13_longest_consecutive_subsequence.cpp`
+Finds the **length of the longest consecutive subsequence**.  
+📆 *Uses hashing for O(n) performance.*
+
+---
+
+### ✅ `14_rearrange_pos_neg.cpp`
+Rearranges array such that **positive and negative numbers alternate**, maintaining order.  
+➕ *Uses separate temp arrays and merges while maintaining position.*
+
+---
+
+### ✅ `15_leaders_in_array.cpp`
+Finds all **leaders** in an array — an element is a leader if it's greater than all elements to its right.  
+👑 *Reverse traversal, no nested loops. O(n) efficient.*
+
+---
+
+## 🏁 Summary
+
+| #   | Program                            | Techniques Used                     |
+|-----|------------------------------------|-------------------------------------|
+| 01  | Reverse Array                      | Two-pointer                         |
+| 02  | Move Zeroes                        | Pointer Manipulation                |
+| 03  | Second Largest                     | Single Pass, No Sorting             |
+| 04  | Remove Duplicates (Sorted)         | Two Pointers                        |
+| 05  | Left Rotate by D                   | Reversal Algorithm                  |
+| 06  | Sort 0s, 1s, 2s                    | Dutch National Flag                 |
+| 07  | Maximum Subarray Sum               | Kadane’s Algorithm (DP)             |
+| 08  | Sorted & Rotated Check             | Count Violations                    |
+| 09  | Merge Sorted Arrays In-place       | Gap Method                          |
+| 10  | Intersection & Union               | Hashing                             |
+| 11  | Subarray with Given Sum            | Sliding Window                      |
+| 12  | Majority Element                   | Boyer-Moore                         |
+| 13  | Longest Consecutive Subsequence    | Hashing                             |
+| 14  | Rearranging Pos/Neg                | Temp Arrays + Merge Logic           |
+| 15  | Leaders in Array                   | Reverse Traversal, O(n)             |
+
+---
+
+> 🚀 *Keep exploring, commit consistently, and watch your array mastery level up!*
 
