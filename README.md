@@ -32,7 +32,7 @@ DSA-MasterCPP/
 
 ## 🎯 Roadmap
 - [x] Arrays
-- [ ] Strings
+- [x] Strings
 - [ ] Linked Lists
 - [ ] Stacks & Queues
 - [ ] Trees
