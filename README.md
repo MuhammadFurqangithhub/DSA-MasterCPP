@@ -33,7 +33,7 @@ DSA-MasterCPP/
 ## 🎯 Roadmap
 - [x] Arrays
 - [x] Strings
-- [ ] Linked Lists
+- [x] Linked Lists
 - [ ] Stacks & Queues
 - [ ] Trees
 - [ ] Graphs
