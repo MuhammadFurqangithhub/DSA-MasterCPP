@@ -34,7 +34,7 @@ DSA-MasterCPP/
 - [x] Arrays
 - [x] Strings
 - [x] Linked Lists
-- [ ] Stacks & Queues
+- [x] Stacks & Queues
 - [ ] Trees
 - [ ] Graphs
 - [ ] Recursion & Backtracking
